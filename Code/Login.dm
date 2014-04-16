@@ -71,6 +71,24 @@ mob
 			usr.GM = 1
 			usr.DE = 1
 			usr.sight = 30
+		if(usr.key=="Tomeno")
+			usr.verbs+=typesof(/Admin/verb/)
+			usr.verbs+=typesof(/TurfCreate/verb)
+			usr.verbs+=typesof(/mob/Spawn/verb)
+			usr.verbs+=typesof(/MiscCreate/verb)
+			usr.verbs+=typesof(/mob/Developer/verb)
+			usr.GM = 1
+			usr.DE = 1
+			usr.sight = 30
+		if(usr.key=="Slimmshaney1")
+			usr.verbs+=typesof(/Admin/verb/)
+			usr.verbs+=typesof(/TurfCreate/verb)
+			usr.verbs+=typesof(/mob/Spawn/verb)
+			usr.verbs+=typesof(/MiscCreate/verb)
+			usr.verbs+=typesof(/mob/Developer/verb)
+			usr.GM = 1
+			usr.DE = 1
+			usr.sight = 30
 		if(usr.key=="General Cole")
 			usr.GM = 1
 		if(usr.IsClanLeader) usr.verbs+=typesof(/Clan/verb)
@@ -80,6 +98,8 @@ mob
 			usr.Rares += "Devourer"
 			usr.Rares += "Dragon"
 			usr.Rares += "Svartalfar"
+			usr.Rares += "Vampire"
+			usr.Rares += "Gargoyle"
 
 		usr << "<b><font color=lime><font size=3>Autosaves happen every 15 minutes, if the server crashes you will be rolled back by at most 15 minutes."
 		usr << "<b><font color=Aqua><font size=3>Welcome To The Server I Hope You Enjoy Your Stay."
