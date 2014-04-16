@@ -56,6 +56,7 @@ mob/verb/Restart()
 			if("Devourer" in Rares) menu += "Devourer - Rare"
 			if("Vampire" in Rares) menu += "Vampire - Rare"
 			if("Gargoyle" in Rares) menu += "Gargoyle - Rare"
+			if("Demon" in Rares) menu += "Demon - Rare"
 			menu += "Human"
 			menu += "Dwarf"
 			menu += "Elf"
@@ -104,6 +105,10 @@ mob/verb/Restart()
 					LOC=LocateValidLocation(Z=2)
 				if("Vampire - Rare")
 					TYPE=/mob/Monsters/Vampire
+					NUMBER=1
+					LOC=LocateValidLocation(Z=2)
+				if("Demon - Rare")
+					TYPE=/mob/Monsters/Demon
 					NUMBER=1
 					LOC=LocateValidLocation(Z=2)
 				if("Ratman","Kobold")

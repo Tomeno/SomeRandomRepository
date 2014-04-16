@@ -119,11 +119,12 @@ mob
 			usr.LoggedIn = 1
 			//var/Sand = prob(3)
 			var/Illit = prob(5)
-			var/Devo = prob(5)
+			var/Devo = prob(10)
 			var/Drago = prob(5)
-			var/Svart = prob(5)
+			var/Svart = prob(10)
 			var/Garg = prob(5)
 			var/Vamp = prob(5)
+			var/Demo = prob(3)
 			for(var/mob/LLL in PlayerList) if(LLL.DMID == usr.DMID) if(LLL.key != usr.key)
 				//Sand = 0
 				Illit = 0
@@ -132,6 +133,7 @@ mob
 				Svart = 0
 				Garg = 0
 				Vamp = 0
+				Demo = 0
 			//if(Sand) usr.Rares += "SandKing"
 			if(Illit) usr.Rares += "Illithids"
 			if(Devo) usr.Rares += "Devourer"
@@ -139,6 +141,7 @@ mob
 			if(Svart) usr.Rares += "Svartalfar"
 			if(Garg) usr.Rares += "Gargoyle"
 			if(Vamp) usr.Rares += "Vampire"
+			if(Demo) usr.Rares += "Demon"
 		var/In = 0
 		if(usr in PlayerList) In = 1
 		if(In == 0) PlayerList += usr
