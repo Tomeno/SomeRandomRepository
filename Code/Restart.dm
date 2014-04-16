@@ -38,7 +38,7 @@ mob/verb/Restart()
 					if(T.density) if(!T.IsWall) T.icon_state = "CaveWall"
 					del(DD)
 				for(var/obj/Items/I in M) if(I.Content3 == "Cage") M.ForceDropItem(I)
-				if(M.Race != "Devouerer" && M.Race != "Illithid" && M.Caged && M.Race != "SandKing" && M.SubRace != "Werewolf" && M.Race != "Svartalfar" && !M.Infects && M.SubRace != "Queen" && !M.IsRoyal)
+				if(M.Race != "Devouerer" && M.Race != "Illithid" && M.Caged && M.Race != "SandKing" && M.SubRace != "Werewolf" && M.Race != "Svartalfar" && M.Race != "Vampire" && !M.Infects && M.SubRace != "Queen" && !M.IsRoyal)
 					M.CanBeSlaved = 1
 					M.ChangeOwnership(FORCE=1)
 				else del(M)
@@ -54,6 +54,8 @@ mob/verb/Restart()
 			if("Svartalfar" in Rares) menu += "Svartalfar - Rare"
 			if("Dragon" in Rares) menu += "Dragon - Rare"
 			if("Devourer" in Rares) menu += "Devourer - Rare"
+			if("Vampire" in Rares) menu += "Vampire - Rare"
+			if("Gargoyle" in Rares) menu += "Gargoyle - Rare"
 			menu += "Human"
 			menu += "Dwarf"
 			menu += "Elf"
@@ -94,6 +96,14 @@ mob/verb/Restart()
 					LOC=LocateValidLocation(X=240,XX=850,Y=210,YY=800)
 				if("Svartalfar - Rare")
 					TYPE=/mob/Monsters/Svartalfar
+					NUMBER=1
+					LOC=LocateValidLocation(Z=2)
+				if("Gargoyle - Rare")
+					TYPE=/mob/Monsters/Gargoyle
+					NUMBER=1
+					LOC=LocateValidLocation(Z=2)
+				if("Vampire - Rare")
+					TYPE=/mob/Monsters/Vampire
 					NUMBER=1
 					LOC=LocateValidLocation(Z=2)
 				if("Ratman","Kobold")
@@ -151,6 +161,10 @@ mob/verb/Restart()
 						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Helmet/RedHat,"Quality"))
 						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Chestplate/RedRobe,"Quality"))
 						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Weapon/Maces/NecroStaff,"Quality"))
+					if("Vampire")
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Helmet/BlackHood,"Quality"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Chestplate/BlackRobe,"Quality"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Capes/BlackCape,"Quality"))
 				for(var/obj/Items/Equipment/E in M) M.EquipItem(E)
 				if(M.weight>M.weightmax) M.weightmax=M.weight+30
 				M.ChangeOwnership(src)
