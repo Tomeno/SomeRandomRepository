@@ -88,8 +88,6 @@ mob
 				usr.Intelligence += rand(1,2)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
 			FleshCrawler
 				parent_type=/mob/Monsters
 				UsesEquipment=0
@@ -138,8 +136,6 @@ mob
 					usr.Defence += rand(15,25)
 					StartAllProcs()
 					..()
-					var/image/I = new('mob.dmi',src)
-					src.Star = I
 					spawn(2000)
 						src.Killer = "Rapid Decay"
 						src.GoingToDie = 1
@@ -212,8 +208,6 @@ mob
 			New()
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
 		Chests
 			icon = 'Cave.dmi'
 			density=0
@@ -222,9 +216,6 @@ mob
 			Wagon=1
 			CantKill=1
 			layer=4
-			New()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
 			SilverChest
 				icon_state = "Silver Chest"
 				desc = "This is a silver chest, it can ued to store items in."
@@ -324,8 +315,6 @@ mob
 				usr.DieAge += rand(1600,1700)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
 		Human
 			icon = 'Human.dmi'
 			icon_state = "Normal"
@@ -534,8 +523,7 @@ mob
 				DieAge += rand(95,115)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Orc
 			icon = 'Orc.dmi'
 			icon_state = "Normal"
@@ -663,8 +651,7 @@ mob
 				DieAge += rand(110,125)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Illithid
 			icon = 'Illithid.dmi'
 			icon_state = "Normal"
@@ -732,8 +719,7 @@ mob
 				DieAge += rand(270,300)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Goblin
 			icon = 'Goblins.dmi'
 			icon_state = "Normal"
@@ -859,8 +845,7 @@ mob
 				DieAge = rand(110,120)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		SandKing
 			UsesEquipment=0
 			icon = 'Sandking.dmi'
@@ -908,8 +893,7 @@ mob
 				Bleeding()
 				usr.DieAge = rand(1000,2000)
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 			Sand_Humanoid
 				parent_type = /mob/Monsters/Dwarf
 				icon = 'Sand Humanoid.dmi'
@@ -1039,8 +1023,7 @@ mob
 				DieAge += rand(120,150)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Lizardman
 			icon = 'Lizardman.dmi'
 			icon_state = "Normal"
@@ -1142,8 +1125,7 @@ mob
 				usr.Defence += rand(9,12)
 				usr.Intelligence += rand(0.25,0.5)
 				usr.DieAge += rand(110,115)
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 				StartAllProcs()
 				..()
 		Ratman
@@ -1235,8 +1217,7 @@ mob
 				DieAge += rand(40,50)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Svartalfar
 			icon = 'Night Elf.dmi'
 			icon_state = "Normal"
@@ -1311,8 +1292,7 @@ mob
 				usr.DieAge += rand(500,600)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Kobold
 			icon = 'Kobold.dmi'
 			icon_state = "Normal"
@@ -1406,8 +1386,7 @@ mob
 				DieAge += rand(95,110)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Zombie
 			icon = 'Kobold.dmi'
 			icon_state = "Normal"
@@ -1456,8 +1435,7 @@ mob
 				usr.DieAge += 10000
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Vampire
 			Undead=1
 			icon = 'Vampire.dmi'
@@ -1531,8 +1509,7 @@ mob
 				usr.DieAge += rand(4000,4250)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Gargoyle
 			UsesPoison=1
 			icon = 'Gargoyle.dmi'
@@ -1593,8 +1570,7 @@ mob
 				usr.DieAge += rand(2000,5000)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Demon
 			BloodContent = 350
 			MaxBloodContent = 350
@@ -1740,8 +1716,7 @@ mob
 				usr.Intelligence += rand(4,8)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Frogman
 			UsesPoison=1
 			icon = 'FrogMan.dmi'
@@ -1839,8 +1814,7 @@ mob
 				usr.DieAge += rand(100,120)
 				StartAllProcs()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
+
 		Skeleton
 			icon = 'Skeleton.dmi'
 			icon_state = "Normal"

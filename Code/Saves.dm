@@ -62,7 +62,5 @@ mob/proc/LoadUnits() if(fexists("units/[ckey]_save.sav"))
 		if(K.Race=="Devourer") K.CanWalk = 1
 		K.RebuildOverlays()
 		if(K.Race == "Vampire") if(K.y == 1 || K.y == 3) K.y = 2
-		var/image/I = new('mob.dmi',K)
-		K.Star = I
 		K.LimbLoss()
 	return(1)

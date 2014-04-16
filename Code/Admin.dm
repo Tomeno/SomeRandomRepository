@@ -247,6 +247,9 @@ Admin/verb
 					menu4 += "Devourer"
 					menu4 += "Dragon"
 					menu4 += "Svartalfar"
+					menu4 += "Gargoyle"
+					menu4 += "Vampire"
+					menu4 += "Give All"
 					menu4 += "Remove All"
 					menu4 += "Cancel"
 					switch(input("Which Race?", "Choose", null) in menu4)
@@ -271,6 +274,15 @@ Admin/verb
 						if("Gargoyle")
 							S.Rares += "Gargoyle"
 							usr << "You have given [S] Gargoyle"
+						if("Give All")
+							S.Rares += "Gargoyle"
+							S.Rares += "Vampire"
+							S.Rares += "Svartalfar"
+							S.Rares += "Dragon"
+							S.Rares += "Devourer"
+							S.Rares += "Illithids"
+							S.Rares += "SandKing"
+							usr << "You have given [S] all rares"
 						if("Remove All")
 							S.Rares -= S.Rares
 							usr << "You have removed [S]'s rares"
