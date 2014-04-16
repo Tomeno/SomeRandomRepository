@@ -117,16 +117,28 @@ mob
 		usr.density = 0
 		if(usr.LoggedIn == 0)
 			usr.LoggedIn = 1
-			var/Sand = prob(3)
-			var/Illit = prob(3)
+			//var/Sand = prob(3)
+			var/Illit = prob(5)
+			var/Devo = prob(5)
+			var/Drago = prob(5)
+			var/Svart = prob(5)
+			var/Garg = prob(5)
+			var/Vamp = prob(5)
 			for(var/mob/LLL in PlayerList) if(LLL.DMID == usr.DMID) if(LLL.key != usr.key)
-				Sand = 0
+				//Sand = 0
 				Illit = 0
-			if(Sand) usr.Rares += "SandKing"
+				Devo = 0
+				Drago = 0
+				Svart = 0
+				Garg = 0
+				Vamp = 0
+			//if(Sand) usr.Rares += "SandKing"
 			if(Illit) usr.Rares += "Illithids"
-			if(Illit) usr.Rares += "Devourer"
-			if(Illit) usr.Rares += "Dragon"
-			if(Illit) usr.Rares += "Svartalfar"
+			if(Devo) usr.Rares += "Devourer"
+			if(Drago) usr.Rares += "Dragon"
+			if(Svart) usr.Rares += "Svartalfar"
+			if(Garg) usr.Rares += "Gargoyle"
+			if(Vamp) usr.Rares += "Vampire"
 		var/In = 0
 		if(usr in PlayerList) In = 1
 		if(In == 0) PlayerList += usr

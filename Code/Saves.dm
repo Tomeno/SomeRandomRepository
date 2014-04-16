@@ -2,6 +2,7 @@ mob/var
 	savedx = 0
 	savedy = 0
 	savedz = 0
+	list/savedRares = new()
 Admin/verb/SaveUnitsInWorld()
 	set category="Admin"
 	SaveUnits()
@@ -15,6 +16,7 @@ Admin/verb/SaveUnitsInWorld()
 /proc/SaveUnits() for(var/mob/M in world) if(M.key)
 	var/sav = "units/[M.ckey]_save.sav"
 	var/savefile/S = new(sav)
+	M.savedRares = M.Rares
 	M.savedx = M.x
 	M.savedy = M.y
 	M.savedz = M.z
@@ -34,6 +36,7 @@ mob/proc/LoadUnits() if(fexists("units/[ckey]_save.sav"))
 		z = savedz
 	Loaded = 1
 	density = 0
+	Rares = savedRares
 	Selected = list()
 	client.images = null
 	if(IsClanLeader == 1) verbs+=typesof(/Clan/verb)

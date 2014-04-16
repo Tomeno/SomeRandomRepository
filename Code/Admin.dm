@@ -265,6 +265,12 @@ Admin/verb
 						if("Svartalfar")
 							S.Rares += "Svartalfar"
 							usr << "You have given [S] Svartalfar"
+						if("Vampire")
+							S.Rares += "Vampire"
+							usr << "You have given [S] Vampire"
+						if("Gargoyle")
+							S.Rares += "Gargoyle"
+							usr << "You have given [S] Gargoyle"
 						if("Remove All")
 							S.Rares -= S.Rares
 							usr << "You have removed [S]'s rares"
