@@ -1191,6 +1191,9 @@ mob
 			Frogman()
 				set category = "NPC's"
 				new/mob/Monsters/Frogman/NPC/Scout(usr.loc)
+			Skorn()
+				set category = "NPC's"
+				new/mob/Monsters/Human/NPC/Skorn(usr.loc)
 			Frogman_Chieftain()
 				set category = "NPC's"
 				new/mob/Monsters/Frogman/NPC/Chieftain(usr.loc)
