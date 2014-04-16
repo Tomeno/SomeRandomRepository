@@ -59,8 +59,6 @@ mob/Monsters
 			usr.DieAge = rand(1300,1500)
 			StartAllProcs()
 			..()
-			var/image/I = new('mob.dmi',src)
-			src.Star = I
 		Queen
 			icon = 'SpiderQueenYoung.dmi'
 			SubRace = "Queen"

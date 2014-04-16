@@ -197,6 +197,7 @@ obj/Items/Equipment/DblClick() if(ItemType)
 		if(EquipmentType())menu+="Equip/UnEquip"
 		if(icon_state == "NecroStaff")menu += "Raise Skeleton"
 		if(ItemType=="Quiver")menu+="Drop Arrows"
+		if(M.Race == "Gremlin")menu+="Eat"
 		menu+="Inspect"
 		menu+="Drop"
 		menu+="Cancel"

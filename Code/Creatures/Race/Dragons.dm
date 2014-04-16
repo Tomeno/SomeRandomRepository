@@ -59,8 +59,6 @@ mob/Monsters/Dragon
 		else Gender="Female"
 		StartAllProcs()
 		..()
-		var/image/I = new('mob.dmi',src)
-		src.Star = I
 	NPCDragon
 		ReturnDelay = 400
 		CanBeSlaved = 1

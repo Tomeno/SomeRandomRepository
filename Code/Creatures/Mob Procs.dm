@@ -1,7 +1,7 @@
 mob/New()
 	var/image/I = new('mob.dmi',src)
 	I.layer = MOB_LAYER - 1
-	if(src.UsesEquipment)
+	if(src.Race!="Spider")
 		I.icon_state = "hum"
 		I.pixel_y = -5
 	src.Star = I

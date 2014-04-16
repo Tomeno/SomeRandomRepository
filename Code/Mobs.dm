@@ -1292,6 +1292,66 @@ mob
 				usr.DieAge += rand(500,600)
 				StartAllProcs()
 				..()
+		Gremlin
+			icon = 'Dwarf.dmi'
+			icon_state = "Normal"
+			density = 1
+			weightmax = 85
+			Race = "Gremlin"
+			CliffClimber=0
+			MineingSkill = 10
+			WoodCuttingSkill = 10
+			BowSkill = 20
+			BloodContent = 150
+			MaxBloodContent = 150
+			Carn = 1
+			SpearSkill = 10
+			ArmourSkill = 10
+			LockPickingSkill = 10
+			SneakingSkill = 40
+			UsesPoison = 0
+			PoisonSkill = 20
+			SkinningSkill = 15
+			BoneCraftingSkill = 20
+			ButcherySkill = 10
+			UnArmedSkill = 15
+			FishingSkill = 20
+			MetalCraftingSkill = 10
+			WoodCraftingSkill = 10
+			StoneCraftingSkill = 10
+			LeatherCraftingSkill = 10
+			HasLeftEye = 1
+			HasRightEye = 1
+			HasRightLung  = 1
+			HasLeftLung  = 1
+			HasSpleen  = 1
+			HasTeeth  = 1
+			HasLeftArm  = 1
+			HasRightArm = 1
+			HasLeftLeg = 1
+			HasRightLeg = 1
+			HasHead = 1
+			HasLeftEar = 1
+			HasRightEar = 1
+			HasGuts = 1
+			HasStomach = 1
+			HasLeftKidney = 1
+			HasRightKidney = 1
+			HasLiver = 1
+			HasBrain = 1
+			HasHeart = 1
+			HasThroat = 1
+			HasNose = 1
+			OrganMaxHP = 60
+			New()
+				Age = rand(10,20)
+				usr.Strength += rand(7,9)
+				usr.Agility += rand(10,16)
+				usr.Defence += rand(10,15)
+				usr.Intelligence -= rand(3,5)
+				usr.DieAge += rand(500,600)
+				StartAllProcs()
+				..()
 
 		Kobold
 			icon = 'Kobold.dmi'
@@ -1887,5 +1947,3 @@ mob
 				WalkTo()
 				FullHeal()
 				..()
-				var/image/I = new('mob.dmi',src)
-				src.Star = I
