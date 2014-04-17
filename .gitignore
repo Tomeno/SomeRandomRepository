@@ -3,6 +3,7 @@
 *.dyn.rsc
 *.int
 *.lk
+*.sav
 ErrorLog.txt
 players/
 units/
