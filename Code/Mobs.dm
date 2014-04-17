@@ -1878,12 +1878,15 @@ mob
 		Angel
 			BloodContent = 350
 			MaxBloodContent = 350
+			Strength = 50
+			Agility = 50
+			Intelligence = 10
 			icon = 'Angel.dmi'
 			ImmunePoison=1
 			ImmuneToTemperature=1
 			Race = "Angel"
-			SubRace = "Blooded"
-			IsWood = 0
+			//SubRace = "Blooded"
+			//IsWood = 0
 			Shielded = 1
 			weightmax = 200
 			MineingSkill = 10
@@ -1940,6 +1943,16 @@ mob
 			BowSkill = 15
 			ShieldSkill  = 20
 			ArmourSkill  = 35
+			New(LOC,GENDER=prob(50))
+				if(GENDER) Gender = "Male"
+				else Gender = "Female"
+				Age = rand(200,600)
+				usr.DieAge += rand(10000,12500)
+				usr.Strength += rand(100,120)
+				usr.Agility += rand(100,120)
+				usr.Intelligence += rand(4,8)
+				StartAllProcs()
+				..()
 
 		Skeleton
 			icon = 'Skeleton.dmi'

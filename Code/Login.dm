@@ -100,6 +100,8 @@ mob
 			usr.Rares += "Svartalfar"
 			usr.Rares += "Vampire"
 			usr.Rares += "Gargoyle"
+			usr.Rares += "Demon"
+			usr.Rares += "Angel"
 
 		usr << "<b><font color=lime><font size=3>Autosaves happen every 15 minutes, if the server crashes you will be rolled back by at most 15 minutes."
 		usr << "<b><font color=Aqua><font size=3>Welcome To The Server I Hope You Enjoy Your Stay."
