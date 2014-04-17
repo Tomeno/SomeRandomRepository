@@ -250,6 +250,7 @@ Admin/verb
 					menu4 += "Gargoyle"
 					menu4 += "Vampire"
 					menu4 += "Demon"
+					menu4 += "Angel"
 					menu4 += "Give All"
 					menu4 += "Remove All"
 					menu4 += "Cancel"
@@ -278,6 +279,9 @@ Admin/verb
 						if("Demon")
 							S.Rares += "Demon"
 							usr << "You have given [S] Demon"
+						if("Angel")
+							S.Rares += "Angel"
+							usr << "You have given [S] Angel"
 						if("Give All")
 							S.Rares += "Gargoyle"
 							S.Rares += "Vampire"
@@ -286,6 +290,7 @@ Admin/verb
 							S.Rares += "Devourer"
 							S.Rares += "Illithids"
 							S.Rares += "Demon"
+							S.Rares += "Angel"
 							S.Rares += "SandKing"
 							usr << "You have given [S] all rares"
 						if("Remove All")

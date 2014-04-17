@@ -1,4 +1,14 @@
 obj/Items/Equipment/Weapon
+	HolySpear
+		ItemType="Spear"
+		name = "Holy Spear - Supernatural Quality"
+		desc = "This strange spear is harder than steel, it is made from an unknown material, it illuminates the area with bright light."
+		icon_state="Spear"
+		icon='Angel Spear.dmi'
+		text="<font color=yellow>&"
+		weight=25
+		WeaponDamageMin = 45
+		WeaponDamageMax = 60
 	DemonicWeapons
 		icon='DemonicItems.dmi'
 		text="<font color=purple>&"

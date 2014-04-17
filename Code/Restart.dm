@@ -57,6 +57,7 @@ mob/verb/Restart()
 			if("Vampire" in Rares) menu += "Vampire - Rare"
 			if("Gargoyle" in Rares) menu += "Gargoyle - Rare"
 			if("Demon" in Rares) menu += "Demon - Rare"
+			if("Angel" in Rares) menu += "Angel - Rare"
 			menu += "Human"
 			menu += "Dwarf"
 			menu += "Elf"
@@ -111,6 +112,10 @@ mob/verb/Restart()
 					TYPE=/mob/Monsters/Demon
 					NUMBER=1
 					LOC=LocateValidLocation(Z=2)
+				if("Angel - Rare")
+					TYPE=/mob/Monsters/Angel
+					NUMBER=1
+					LOC=LocateValidLocation(X=240,XX=850,Y=210,YY=800)
 				if("Ratman","Kobold")
 					NUMBER=5
 					LOC=LocateValidLocation(X=289,XX=851,Y=211,YY=360)
@@ -170,6 +175,14 @@ mob/verb/Restart()
 						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Helmet/BlackHood,"Quality"))
 						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Chestplate/BlackRobe,"Quality"))
 						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Capes/BlackCape,"Quality"))
+					if("Angel")
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Weapon/HolySpear,"Holy"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Chestplate/SupernaturalBoneChestPlate,"Holy"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Helmet/SupernaturalBoneHelmet,"Holy"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Leggings/SupernaturalBoneLeggings,"Holy"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/LeftArm/SupernaturalBoneLeftGauntlet,"Holy"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/RightArm/SupernaturalBoneRightGauntlet,"Holy"))
+						M.ForcePickUpItem(CraftItem(new/obj/Items/Equipment/Armour/Capes/WhiteCape,"Holy"))
 				for(var/obj/Items/Equipment/E in M) M.EquipItem(E)
 				if(M.weight>M.weightmax) M.weightmax=M.weight+30
 				M.ChangeOwnership(src)

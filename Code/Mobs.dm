@@ -1696,6 +1696,7 @@ mob
 			BowSkill = 15
 			ShieldSkill  = 20
 			ArmourSkill  = 35
+
 			NPC
 				IsRoyal=1//Stops ever changing owner, and grants better stats.
 				CanBeSlaved = 1
@@ -1874,6 +1875,71 @@ mob
 				usr.DieAge += rand(100,120)
 				StartAllProcs()
 				..()
+		Angel
+			BloodContent = 350
+			MaxBloodContent = 350
+			icon = 'Angel.dmi'
+			ImmunePoison=1
+			ImmuneToTemperature=1
+			Race = "Angel"
+			SubRace = "Blooded"
+			IsWood = 0
+			Shielded = 1
+			weightmax = 200
+			MineingSkill = 10
+			WoodCuttingSkill = 10
+			Carn = 1
+			BloodContent = 300
+			MaxBloodContent = 300
+			WingsOut = 1
+			WoodCraftingSkill  = 20
+			MetalCraftingSkill  = 20
+			SkinningSkill  = 20
+			ButcherySkill  = 20
+			LeatherCraftingSkill  = 20
+			PoisonSkill  = 20
+			BoneCraftingSkill  = 20
+			StoneCraftingSkill  = 20
+			LockPickingSkill = 20
+			JewlCraftingSkill = 20
+			CookingSkill  = 20
+			FishingSkill  = 25
+			SneakingSkill  = 15
+			text = "<font color=white>&"
+
+			HasWings = 1
+			HasLeftEye = 1
+			HasRightEye = 1
+			HasRightLung  = 1
+			HasLeftLung  = 1
+			HasSpleen  = 1
+			HasTeeth  = 1
+			HasLeftArm  = 1
+			HasRightArm = 1
+			HasLeftLeg = 1
+			HasRightLeg = 1
+			HasHead = 1
+			HasLeftEar = 1
+			HasRightEar = 1
+			HasGuts = 1
+			HasStomach = 1
+			HasLeftKidney = 1
+			HasRightKidney = 1
+			HasLiver = 1
+			HasBrain = 1
+			HasHeart = 1
+			HasThroat = 1
+			HasNose = 1
+			OrganMaxHP = 250
+
+			SpearSkill = 50
+			AxeSkill  = 20
+			SwordSkill  = 50
+			UnArmedSkill  = 30
+			MaceSkill  = 20
+			BowSkill = 15
+			ShieldSkill  = 20
+			ArmourSkill  = 35
 
 		Skeleton
 			icon = 'Skeleton.dmi'

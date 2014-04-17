@@ -18,7 +18,7 @@ mob/proc/LevelUp()
 		Level += 1
 		Owner << "[src] has reached level [Level]!"
 		switch(Race)
-			if("Dwarf","Demon","Gargoyle","Frogman","Dragon") OrganMaxHP+=2.25
+			if("Dwarf","Demon","Gargoyle","Frogman","Dragon","Angel") OrganMaxHP+=2.25
 			if("Frogman","Vampire","Lizardman","Demon","Orc","Dwarf","Gargoyle","Svartalfar") OrganMaxHP+=2
 			if("Human","Goblin","Illithid","Elf","Kobold","Zombie") OrganMaxHP+=1.75
 			if("Ratman") OrganMaxHP += 1.5
@@ -97,6 +97,10 @@ mob/proc/LevelUp()
 				WEI+=15
 				INT+=0.05
 			if("Demon")
+				STR+=2
+				AGL+=2
+				WEI+=30
+			if("Angel")
 				STR+=2
 				AGL+=2
 				WEI+=30

@@ -27,6 +27,7 @@ mob/proc/RebuildOverlays()
 		switch(icon) //This won't cause issues with flying as the actual icon gets changed to 'Fly.dmi' while flying, and these overlays are based on icon.
 			if('Vampire.dmi') overlays += icon('Wings.dmi',"Vampire")
 			if('Demon.dmi') overlays += icon('Wings.dmi',"Demon")
+			if('Angel.dmi') overlays += icon('Wings.dmi',"Angel")
 			if('Gargoyle.dmi') overlays += icon('Wings.dmi',"Gargoyle")
 			if('Angel of Death.dmi') overlays += icon('Wings.dmi',"Death Angel")
 	if(SubRace == "Illithid" && Race == "Illithid") overlays += icon('Book.dmi',"Illithid Tentacles")

@@ -466,7 +466,7 @@ mob/verb/Interact() for(var/mob/Monsters/M in usr.Selected)
 					menu2 += "Turn Into Mist"
 					if(!M.DayWalker) if(M.Level >= 40) menu2 += "Become Daywalker"
 		if(M.HasWings)
-			if(M.Race == "Angel of Death" || M.Race == "Demon" || M.Race == "Gargoyle" || M.Race == "Vampire") menu2 += "Retract Wings"
+			if(M.Race == "Angel of Death" || M.Race == "Demon" || M.Race == "Gargoyle" || M.Race == "Vampire" || M.Race == "Angel") menu2 += "Retract Wings"
 			menu2 += "Fly"
 		if(M.Race == "Spider")
 			menu2 += "Rest"
@@ -630,7 +630,7 @@ mob/verb/Interact() for(var/mob/Monsters/M in usr.Selected)
 				M.DayWalker = 1
 				view(M) << "[M] harnesses their power and transforms into a creature out of nightmares, a creature not bound to the darkness!"
 			if("Fly") M.Fly()
-			if("Retract Wings") if(!M.Flying) if(M.Race == "Demon" || M.Race == "Gargoyle" || M.Race == "Vampire" || M.Race == "Angel of Death")
+			if("Retract Wings") if(!M.Flying) if(M.Race == "Demon" || M.Race == "Gargoyle" || M.Race == "Vampire" || M.Race == "Angel of Death" || M.Race == "Angel")
 				if(M.WingsOut) M.WingsOut = 0
 				else M.WingsOut = 1
 				M.RebuildOverlays()
@@ -666,7 +666,7 @@ mob/verb/Interact() for(var/mob/Monsters/M in usr.Selected)
 							if(M.density == 1)
 								if(M.CoolDown == 0)
 									if(M.HasTeeth == 1)
-										if(C.Race != "Vampire" && C.SubRace != "Werewolf" && C.Race != "Gargoyle" && C.Race != "Svartalfar" && C.Race != "Demon" && C.Race != "Skeleton" && C.Race != "Dragon")
+										if(C.Race != "Vampire" && C.SubRace != "Werewolf" && C.Race != "Gargoyle" && C.Race != "Svartalfar" && C.Race != "Demon" && C.Race != "Skeleton" && C.Race != "Dragon" && M.Race == "Angel")
 											if(C.Wagon == 0)
 												if(C.Race != "TowerCap")
 													if(M.IsMist == 0)

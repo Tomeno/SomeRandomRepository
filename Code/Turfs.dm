@@ -514,7 +514,7 @@ obj
 									menu += "Inspect"
 									for(var/mob/Monsters/Q in src)
 										if(Q.Cantame == 1) menu += "Tame"
-										if(Q.CanBeSlaved == 1 && Q.Race != "Demon") menu += "Enslave"
+										if(Q.CanBeSlaved == 1 && Q.Race != "Demon"&& Q.Race != "Angel") menu += "Enslave"
 									//	if(M.Age >= 29 && M.SubRace=="Queen") menu += "Lay Eggs In"
 										menu += "Contents"
 										menu += "TakeItems"

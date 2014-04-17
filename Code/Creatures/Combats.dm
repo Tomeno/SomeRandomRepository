@@ -291,7 +291,7 @@ mob/proc/Attack(mob/Monsters/M)
 			M.BrainHP -= 1
 			del(W)
 		if("Spear","Claws","Dagger")
-		else if(M.Race!="Demon") if(prob(UnArmedSkill/350)) for(var/obj/Items/Equipment/Weapon/W in M) if(M.UnEquipItem(W)) if(M.DropItem(W))
+		else if(M.Race!="Demon" && M.Race!="Angel") if(prob(UnArmedSkill/350)) for(var/obj/Items/Equipment/Weapon/W in M) if(M.UnEquipItem(W)) if(M.DropItem(W))
 			view(M) << "[src] wrenches [M]'s weapon out of their hands!"
 			if(PickUpItem(W)) EquipItem(W)
 	if(M.Race=="Frogman") if(prob((M.Level/33)+1))
@@ -402,6 +402,7 @@ mob/proc/Attack(mob/Monsters/M)
 					if(M.Undead) Damage += 10
 					if(M.Race == "Vampire") Damage -= 2
 					if(M.Race == "Demon") Damage += 12
+					if(M.Race == "Angel") Damage -= 12
 					if(M.SubRace == "HalfDemon") Damage += 12
 					if(M.SubRace == "Werewolf")
 						if(M.Werepowers) Damage += 7

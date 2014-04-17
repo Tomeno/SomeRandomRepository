@@ -369,7 +369,7 @@ mob
 						usr.Text(usr,13,12,4,10,"BoneCraft - Wood")
 						Melt.screen_loc = "11,10"
 						usr.Text(usr,13,10,4,10,"Melter - Stone")
-					if("Vampire","Gargoyle","Demon")
+					if("Vampire","Gargoyle","Demon","Angel")
 						Smelt.screen_loc = "4,16"
 						usr.Text(usr,6,16,4,10,"Smelter - Stone")
 						Forge.screen_loc = "4,14"

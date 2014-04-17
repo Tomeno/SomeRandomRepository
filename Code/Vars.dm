@@ -113,7 +113,7 @@ obj/proc/Portal()
 			var/P = prob(25)
 			if(M.client == null) if(!M.SubRace)
 				if(C) if(M.CanSee)
-					if(M.Wagon == 0 && M.Race != "Demon" && M.Race != "Gargoyle" && M.Race != "Demon" && M.Race != "Dragon" && M.Unholy == 0)
+					if(M.Wagon == 0 && M.Race != "Demon" && M.Race != "Gargoyle" && M.Race != "Demon" && M.Race != "Dragon" && M.Unholy == 0 && M.Race != "Angel")
 						M.Owner << "[M] goes insane from the horror and tears their own eyes out!"
 						M.HasLeftEye = 0
 						M.HasRightEye = 0
@@ -126,7 +126,7 @@ obj/proc/Portal()
 					if(P)
 						if(ismob(M.Owner))
 							if(M.Wagon == 0)
-								if(M.Race != "Demon" && M.Race != "Gargoyle" && M.Race != "Demon" && M.Race != "Dragon")
+								if(M.Race != "Demon" && M.Race != "Gargoyle" && M.Race != "Demon" && M.Race != "Dragon" && M.Race != "Angel")
 									M.Owner << "[M] is possessed by the demonic forces surrounding the portal!"
 									M.RaceChange(SUBRACE="HalfDemon")
 		else
@@ -1109,7 +1109,7 @@ obj/proc/MetalWeaponCraft()
 			WeaponDamageMax = 30
 		if("Holy Quality")
 			WeaponDamageMin = 26
-			WeaponDamageMax = 32
+			WeaponDamageMax = 34
 		if("Unholy Quality")
 			WeaponDamageMin = 20
 			WeaponDamageMax = 40
@@ -1143,7 +1143,7 @@ obj/proc/MetalArmourCraft()
 		if("Masterful Quality") Defence = 15
 		if("Epic Quality") Defence = 16
 		if("Legendary Quality") Defence = 17
-		if("Holy Quality") Defence = 17
+		if("Holy Quality") Defence = 18
 		if("Unholy Quality") Defence = 18
 	name = "[src] - [CraftRank]"
 obj/proc/BoneArmourCraft()
@@ -1156,7 +1156,7 @@ obj/proc/BoneArmourCraft()
 		if("Masterful Quality") Defence = 10
 		if("Epic Quality") Defence = 11
 		if("Legendary Quality") Defence = 12
-		if("Holy Quality") Defence = 13
+		if("Holy Quality") Defence = 14
 		if("Unholy Quality") Defence = 14
 	name = "[src] - [CraftRank]"
 mob
