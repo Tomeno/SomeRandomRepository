@@ -1887,7 +1887,7 @@ mob
 			Race = "Angel"
 			//SubRace = "Blooded"
 			//IsWood = 0
-			Shielded = 1
+			//Shielded = 1
 			weightmax = 200
 			MineingSkill = 10
 			WoodCuttingSkill = 10
@@ -1953,6 +1953,11 @@ mob
 				usr.Intelligence += rand(4,8)
 				StartAllProcs()
 				..()
+				src.Content2 -= 150
+				M.Defence += 10
+				M.Shielded = 1
+				M.ImmuneToMagic = 1
+				M.RebuildOverlays()
 
 		Skeleton
 			icon = 'Skeleton.dmi'
