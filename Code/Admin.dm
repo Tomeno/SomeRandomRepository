@@ -1274,9 +1274,25 @@ mob
 					i ++
 					if(i > maxlen)
 						List3.Add(a)
+			GiveTempGM(var/mob/M in world)
+				set category = "Admin"
+				M.verbs+=typesof(/Admin/verb/)
+				M.GM = 1
+				M.sight = 30
 
+			GiveTempDeveloper(var/mob/M in world)
+				set category = "Admin"
+				M.givedev()
 
-
+mob/proc/givedev()
+	src.verbs+=typesof(/Admin/verb/)
+	src.verbs+=typesof(/TurfCreate/verb)
+	src.verbs+=typesof(/mob/Spawn/verb)
+	src.verbs+=typesof(/MiscCreate/verb)
+	src.verbs+=typesof(/mob/Developer/verb)
+	src.GM = 1
+	src.DE = 1
+	src.sight = 30
 
 proc
 	Log_bug(adminaction) //Define adminaction as a string then call this proc
