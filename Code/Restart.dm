@@ -58,6 +58,7 @@ mob/verb/Restart()
 			if("Gargoyle" in Rares) menu += "Gargoyle - Rare"
 			if("Demon" in Rares) menu += "Demon - Rare"
 			if("Angel" in Rares) menu += "Angel - Rare"
+			menu += "Thallid - Rare"
 			menu += "Human"
 			menu += "Dwarf"
 			menu += "Elf"
@@ -87,6 +88,9 @@ mob/verb/Restart()
 					LOC=LocateValidLocation(Z=2)
 				if("Illithid - Rare")
 					TYPE=/mob/Monsters/Illithid
+					NUMBER=1
+				if("Thallid - Rare")
+					TYPE=/mob/Monsters/Thallid
 					NUMBER=1
 				if("Dragon - Rare")
 					TYPE=/mob/Monsters/Dragon

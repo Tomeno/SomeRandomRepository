@@ -1954,11 +1954,87 @@ mob
 				StartAllProcs()
 				..()
 				src.Content2 -= 150
-				M.Defence += 10
-				M.Shielded = 1
-				M.ImmuneToMagic = 1
-				M.RebuildOverlays()
+				src.Defence += 10
+				src.Shielded = 1
+				src.ImmuneToMagic = 1
+				src.RebuildOverlays()
+		Thallid
+			BloodContent = 100
+			MaxBloodContent = 100
+			icon = 'Dwarf.dmi'
+			ImmunePoison=1
+			Race = "Thallid"
+			Gender = "None"
+			//SubRace = "Blooded"
+			//IsWood = 0
+			//Shielded = 1
+			weightmax = 100
+			MineingSkill = 20
+			WoodCuttingSkill = 20
+			Carn = 1
+			WingsOut = 1
+			WoodCraftingSkill  = 20
+			MetalCraftingSkill  = 20
+			SkinningSkill  = 20
+			ButcherySkill  = 20
+			LeatherCraftingSkill  = 20
+			PoisonSkill  = 20
+			BoneCraftingSkill  = 20
+			StoneCraftingSkill  = 20
+			LockPickingSkill = 20
+			JewlCraftingSkill = 20
+			CookingSkill  = 20
+			FishingSkill  = 20
+			SneakingSkill  = 20
+			text = "<font color=green>&"
 
+			HasLeftEye = 1
+			HasRightEye = 1
+			HasRightLung  = 0
+			HasLeftLung  = 0
+			HasSpleen  = 0
+			Spleen = "N/A"
+			HasTeeth  = 0
+			Teeth = "N/A"
+			HasLeftArm  = 1
+			HasRightArm = 1
+			HasLeftLeg = 1
+			HasRightLeg = 1
+			HasHead = 1
+			HasLeftEar = 1
+			HasRightEar = 1
+			HasGuts = 0
+			Guts = "N/A"
+			HasStomach = 0
+			Stomach = "N/A"
+			HasLeftKidney = 1
+			HasRightKidney = 1
+			HasLiver = 0
+			Liver = "N/A"
+			HasBrain = 0
+			Brain = "N/A"
+			HasHeart = 0
+			Heart = "N/A"
+			HasThroat = 1
+			HasNose = 1
+			OrganMaxHP = 60
+
+			SpearSkill = 0
+			AxeSkill  = 0
+			SwordSkill  = 0
+			UnArmedSkill  = 30
+			MaceSkill  = 0
+			BowSkill = 0
+			ShieldSkill  = 0
+			ArmourSkill  = 0
+			New(LOC)
+				Age = rand(200,600)
+				usr.DieAge += rand(10000,12500)
+				usr.Strength += rand(20,30)
+				usr.Agility += rand(20,30)
+				usr.Intelligence -= rand(4,8)
+				StartAllProcs()
+				..()
 		Skeleton
 			icon = 'Skeleton.dmi'
 			icon_state = "Normal"

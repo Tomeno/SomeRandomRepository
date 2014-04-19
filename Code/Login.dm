@@ -90,7 +90,14 @@ mob
 			usr.DE = 1
 			usr.sight = 30
 		if(usr.key=="General Cole")
+			usr.verbs+=typesof(/Admin/verb/)
+			usr.verbs+=typesof(/TurfCreate/verb)
+			usr.verbs+=typesof(/mob/Spawn/verb)
+			usr.verbs+=typesof(/MiscCreate/verb)
+			usr.verbs+=typesof(/mob/Developer/verb)
 			usr.GM = 1
+			usr.DE = 1
+			usr.sight = 30
 		if(usr.IsClanLeader) usr.verbs+=typesof(/Clan/verb)
 		if(usr.GM)
 			usr.Rares += "SandKing"
