@@ -3,6 +3,7 @@ mob/verb/Interact() for(var/mob/Monsters/M in usr.Selected)
 	menu += "Closest Creature"
 	menu += "This Creature"
 	if(M.MagicalAptitude) menu += "Magical Skills"
+	if(M.Race == "Thallid") menu += "Thallid"
 	menu += "Cancel"
 	var/Result = input("Have [M] interact how?", "[M]", null) in menu
 	if (Result != "Cancel") ..()

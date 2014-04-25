@@ -29,8 +29,8 @@ mob/proc/FullHeal(GROW)
 mob/proc/Bleeding() if(StopDouble("Bleeding")) spawn() while(1)
 	sleep(50)
 	if(src.InHole == 0)
-		if(src.HasLeftLung == 0)
-			if(src.HasRightLung == 0)
+		if(src.LeftLungHP <= 15&&src.HasLeftLung)
+			if(src.RightLungHP <= 15&&src.HasRightLung)
 				src.GoingToDie = 1
 				src.DeathType = "Lung Failure"
 				src.Owner << "<b><font color=red>[src]'s lungs have failed!!"

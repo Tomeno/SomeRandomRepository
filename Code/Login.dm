@@ -89,7 +89,11 @@ mob
 			usr.GM = 1
 			usr.DE = 1
 			usr.sight = 30
+<<<<<<< HEAD
 		if(usr.key==" General Cole")
+=======
+		if(usr.key=="General Cole")
+>>>>>>> 5a8b43981bad9a503acdae75968d93dc20820bd0
 			usr.verbs+=typesof(/Admin/verb/)
 			usr.verbs+=typesof(/TurfCreate/verb)
 			usr.verbs+=typesof(/mob/Spawn/verb)
@@ -98,6 +102,7 @@ mob
 			usr.GM = 1
 			usr.DE = 1
 			usr.sight = 30
+<<<<<<< HEAD
 		if(usr.key=="General Cole,")
 			usr.verbs+=typesof(/Admin/verb/)
 			usr.verbs+=typesof(/TurfCreate/verb)
@@ -107,6 +112,8 @@ mob
 			usr.GM = 1
 			usr.DE = 1
 			usr.sight = 30
+=======
+>>>>>>> 5a8b43981bad9a503acdae75968d93dc20820bd0
 		if(usr.IsClanLeader) usr.verbs+=typesof(/Clan/verb)
 		if(usr.GM)
 			usr.Rares += "SandKing"
