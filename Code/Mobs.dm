@@ -1887,7 +1887,7 @@ mob
 			Race = "Angel"
 			//SubRace = "Blooded"
 			//IsWood = 0
-			Shielded = 1
+			Shielded = 0
 			weightmax = 200
 			MineingSkill = 10
 			WoodCuttingSkill = 10

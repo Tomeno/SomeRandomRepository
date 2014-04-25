@@ -7,8 +7,8 @@ obj/Items/Equipment/Weapon
 		icon='Angel Spear.dmi'
 		text="<font color=yellow>&"
 		weight=25
-		WeaponDamageMin = 45
-		WeaponDamageMax = 60
+		WeaponDamageMin = 80
+		WeaponDamageMax = 100
 	DemonicWeapons
 		icon='DemonicItems.dmi'
 		text="<font color=purple>&"
